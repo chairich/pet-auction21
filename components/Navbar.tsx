@@ -5,8 +5,7 @@ import { usePathname } from "next/navigation";
 const links = [
   { href: "/", label: "Home" },
   { href: "/auctions", label: "Auctions" },
-  { href: "/create-auction", label: "Post Auction" },
-  { href: "/admin", label: "Admin" }
+  { href: "/create-auction", label: "Create Auction" }
 ];
 
 export default function Navbar() {
@@ -18,7 +17,7 @@ export default function Navbar() {
         <div className="space-x-4">
           {links.map((link) => (
             <Link key={link.href} href={link.href}>
-              <span className={\`\${pathname === link.href ? "bg-amber-500 text-white" : "text-gray-600"} px-3 py-1 rounded hover:bg-amber-100 cursor-pointer\`}>
+              <span className={`${pathname === link.href ? "bg-amber-500 text-white" : "text-gray-600"} px-3 py-1 rounded hover:bg-amber-100 cursor-pointer`}>
                 {link.label}
               </span>
             </Link>
