@@ -1,0 +1,1 @@
+import React from 'react'; export default function PetDetail() { return <div>Pet Detail Page</div>; }

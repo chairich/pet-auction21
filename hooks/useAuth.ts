@@ -1,0 +1,1 @@
+export const useAuth = () => ({ user: { email: 'demo@example.com' }, loading: false });
