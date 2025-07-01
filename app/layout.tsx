@@ -1,17 +1,13 @@
-import "./globals.css";
+import { ReactNode } from "react";
 import Navbar from "../components/Navbar";
+import "../app/globals.css";
 
-export const metadata = {
-  title: "Pet Auction",
-  description: "Bid on pets in real-time",
-};
-
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className="bg-gray-50 text-gray-800">
         <Navbar />
-        <main className="max-w-7xl mx-auto">{children}</main>
+        {children}
       </body>
     </html>
   );
